@@ -1,4 +1,4 @@
-import { Interacao } from '../models/interacao.model';
+import { Interacao } from '../models/interacao.model.js';
 
 export async function getByTutorial(req, res) {
   if(!req.body.tutorialId){

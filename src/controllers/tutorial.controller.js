@@ -1,4 +1,4 @@
-import { Tutorial } from "../models/tutorial.model";
+import { Tutorial } from "../models/tutorial.model.js";
 
 export async function getAll(req, res) {
   try {

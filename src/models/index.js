@@ -1,8 +1,8 @@
-import { sequelize } from '../config/database';
-import { Usuario } from './usuario.model';
-import { Foto } from './foto.model';
-import { Interacao } from './interacao.model';
-import { Tutorial } from './tutorial.model';
+import { sequelize } from '../config/database.js';
+import { Usuario } from './usuario.model.js';
+import { Foto } from './foto.model.js';
+import { Interacao } from './interacao.model.js';
+import { Tutorial } from './tutorial.model.js';
 
 Usuario.hasMany(Tutorial, {
    as: "tutorials",

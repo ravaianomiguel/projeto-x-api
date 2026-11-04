@@ -1,4 +1,4 @@
-import { Foto } from "../models/foto.model";
+import { Foto } from "../models/foto.model.js";
 
 export async function getByInteracao(req, res) {
   if(!req.body.interacaoId){
