@@ -27,6 +27,19 @@ export async function getByUsuario(req, res) {
   }
 }
 
+export async function getById(req, res) {
+  try {
+    const interacao = await Interacao.findByPk(req.params.id);
+    if(!interacao) return res.status(404).json({
+      erro: "interacao nao encontrado"
+    })
+    return res.json(interacao);
+  } catch (erro) {
+    return res.status(500).json({ erro: 'Erro ao listar interacao.', detalhes: erro.message });
+  }
+}
+
+
 export async function criar(req, res) {
   try {
     const { desc, tutorialId } = req.body;
@@ -46,7 +59,7 @@ export async function criar(req, res) {
   }
 }
 
-async function remover(req, res) {
+export async function remover(req, res) {
   try {
     const interacao = await Interacao.findByPk(req.params.id);
 

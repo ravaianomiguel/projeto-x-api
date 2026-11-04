@@ -39,7 +39,7 @@ export async function criar(req, res) {
   }
 }
 
-async function remover(req, res) {
+export async function remover(req, res) {
   try {
     const tutorial = await Tutorial.findByPk(req.params.id);
 
